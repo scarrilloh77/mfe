@@ -16,7 +16,7 @@ const prodConfig = {
       exposes: {
         './MarketingApp': './src/bootstrap',
       },
-      shared: packageJson.dependencies,
+      shared: packageJson.dependencies, // This will generate several JS files, however it is advantageous since these files will only be generated once.
     }),
   ],
 };
