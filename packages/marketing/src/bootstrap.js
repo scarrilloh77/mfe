@@ -8,6 +8,14 @@ const mount = (el, { onNavigate }) => {
   const history = createMemoryHistory();
   onNavigate && history.listen(onNavigate); // Then, every time a user clicks on the link, we're going to update our memory history and the memory history will automatically call the callback.
   ReactDOM.render(<App history={history} />, el);
+
+  return {
+    onParentNavigate({ pathname: nextPathname }) {
+      // This is being called by the history.listen function.
+      const { pathname } = history.location;
+      pathname !== nextPathname && history.push(nextPathname);
+    },
+  };
 };
 
 // If we are in development and in isolation, call mount immediately
