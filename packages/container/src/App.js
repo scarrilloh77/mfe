@@ -12,6 +12,7 @@ const generateClassName = createGenerateClassName({ productionPrefix: 'co' });
 export default () => {
   return (
     <BrowserRouter>
+      {/* Con el BrowserRouter se esta haciendo uso del historial del navegador! */}
       <StylesProvider generateClassName={generateClassName}>
         <div>
           <Header />
