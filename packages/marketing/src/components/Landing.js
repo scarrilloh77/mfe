@@ -34,6 +34,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   heroContent: {
+    // Ambas clases generadas automaticamente por JS & CSS (Material UI) en ambos proyectos (Container y Marketing) van a generar el mismo nombre de clase en producción (jss2), lo cual va a generar que los estilos se combinen!
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
   },
