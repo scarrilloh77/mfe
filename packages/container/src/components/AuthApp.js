@@ -1,10 +1,10 @@
-import { mount } from 'marketing/MarketingApp'; // Function that takes in a reference to an HTML element.
+import { mount } from 'auth/AuthApp';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
 export default () => {
   const ref = useRef(null);
-  const history = useHistory(); //copy of the browser history.
+  const history = useHistory();
 
   useEffect(() => {
     const { onParentNavigate } = mount(ref.current, {
