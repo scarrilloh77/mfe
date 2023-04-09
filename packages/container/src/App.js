@@ -16,7 +16,6 @@ export default () => {
   const [isSignedIn, setIsSignedIn] = useState(false);
   return (
     <BrowserRouter>
-      {/* Con el BrowserRouter se esta haciendo uso del historial del navegador! */}
       <StylesProvider generateClassName={generateClassName}>
         <div>
           <Header
